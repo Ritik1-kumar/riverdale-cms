@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_specialty_tags",
+  "info": {
+    "displayName": "specialty-tag"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

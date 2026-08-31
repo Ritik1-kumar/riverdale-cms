@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "navLinks": {
+      "type": "component",
+      "component": "sections.nav-link",
+      "repeatable": true
+    },
+    "bookAVisitLabel": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phoneLink": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "footerText": {
+      "type": "string"
+    }
+  }
+}

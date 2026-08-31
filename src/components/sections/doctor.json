@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_doctors",
+  "info": {
+    "displayName": "doctor"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "specialties": {
+      "type": "component",
+      "component": "sections.specialty-tag",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

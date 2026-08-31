@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_marquee_items",
+  "info": {
+    "displayName": "marquee-item"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,143 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "sections.stat",
+      "repeatable": true
+    },
+    "marqueeItems": {
+      "type": "component",
+      "component": "sections.marquee-item",
+      "repeatable": true
+    },
+    "aboutEyebrow": {
+      "type": "string"
+    },
+    "aboutTitle": {
+      "type": "string"
+    },
+    "aboutDescription": {
+      "type": "richtext"
+    },
+    "aboutDescription2": {
+      "type": "richtext"
+    },
+    "aboutImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "aboutFeatures": {
+      "type": "component",
+      "component": "sections.feature-card",
+      "repeatable": true
+    },
+    "servicesEyebrow": {
+      "type": "string"
+    },
+    "servicesTitle": {
+      "type": "string"
+    },
+    "servicesDescription": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.service-card",
+      "repeatable": true
+    },
+    "hospitalAffiliationTitle": {
+      "type": "string"
+    },
+    "hospitalAffiliationText": {
+      "type": "string"
+    },
+    "hospitalAffiliationLink": {
+      "type": "string"
+    },
+    "hospitalAffiliationLinkText": {
+      "type": "string"
+    },
+    "hospitalAffiliationImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "doctorsEyebrow": {
+      "type": "string"
+    },
+    "doctorsTitle": {
+      "type": "string"
+    },
+    "doctorsDescription": {
+      "type": "text"
+    },
+    "faqEyebrow": {
+      "type": "string"
+    },
+    "faqTitle": {
+      "type": "string"
+    },
+    "faqDescription": {
+      "type": "text"
+    },
+    "doctors": {
+      "type": "component",
+      "component": "sections.doctor",
+      "repeatable": true
+    },
+    "faqCardTitle": {
+      "type": "string"
+    },
+    "faqCardText": {
+      "type": "text"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "sections.faq-item",
+      "repeatable": true
+    },
+    "testimonialsEyebrow": {
+      "type": "string"
+    },
+    "testimonialsTitle": {
+      "type": "string"
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "sections.testimonial",
+      "repeatable": true
+    },
+    "finalCta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false
+    }
+  }
+}

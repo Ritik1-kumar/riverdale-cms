@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_testimonials",
+  "info": {
+    "displayName": "testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "authorMeta": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

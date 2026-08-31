@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_service_cards",
+  "info": {
+    "displayName": "service-card"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
