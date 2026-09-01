@@ -43,13 +43,43 @@ Step 2:Create a git repo
 Step 3: Create a free Web Service on Render
     Go to render.com, sign up/log in
     Create a new Project
-    Click New → Web Service
-    Connect your GitHub account, select your Strapi repo
-    Fill in:
-    Name: whatever you want the service called
-    Region: closest to you
-    Branch: main
-    Build Command: npm install && npm run build
-    Start Command: npm run start
-    Instance Type: Free
-    Don't click "Create Web Service" yet — do Step 4 first (env vars), then create it.
+    
+    First: create the Postgres database (if you haven't yet)
+        Click + Create new service (or + New at top right)
+        Choose PostgreSQL
+        Give it a name (e.g. riverdale-db)
+        Select the Free plan
+        Click Create Database
+        Once created, go to its page → Connections section → copy the Internal Database URL (you'll need it in a minute)
+
+    Then: create the Web Service
+        Click + Create new service again → Web Service
+        Connect your GitHub repo (the Strapi project one)
+        Fill in:
+        Name: your project name
+        Region: same region as your Postgres DB (important — internal URLs only work within the same region)
+        Branch: main
+        Build Command: npm install && npm run build
+        Start Command: npm run start
+        Scroll to Instance Type → select Free ($0/month)
+    
+    Then: Environment Variables section
+        Add these (this is where you paste the Internal Database URL from your Postgres instance):
+
+        Name	                                Value
+        DATABASE_CLIENT	                        postgres
+        DATABASE_URL	                        (Internal Database URL you copied)
+        DATABASE_SSL	                        true
+        DATABASE_SSL_REJECT_UNAUTHORIZED	    false
+        NODE_ENV	                            production
+        APP_KEYS	                            (from your local .env)
+        API_TOKEN_SALT	                        (from your local .env)
+        ADMIN_JWT_SECRET	                    (from your local .env)
+        JWT_SECRET	                            (from your local .env)
+        TRANSFER_TOKEN_SALT	                    (from your local .env)
+
+    Use Add from .env to bulk-paste your local .env, 
+    then manually fix DATABASE_CLIENT to postgres and add the DATABASE_URL/SSL vars since those aren't in your local file.
+
+Then deploy
+    Click Deploy web service at the bottom, and watch the Logs tab. Let me know what shows up there once it finishes building.
