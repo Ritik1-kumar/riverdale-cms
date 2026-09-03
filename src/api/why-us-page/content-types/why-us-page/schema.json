@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "services_pages",
+  "collectionName": "why_us_pages",
   "info": {
-    "singularName": "services-page",
-    "pluralName": "services-pages",
-    "displayName": "Services Page"
+    "singularName": "why-us-page",
+    "pluralName": "why-us-pages",
+    "displayName": "Why Us Page"
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +16,14 @@
       "component": "sections.about-hero",
       "repeatable": false
     },
-    "services": {
+    "stats": {
       "type": "component",
-      "component": "sections.service-detail",
+      "component": "sections.stat",
+      "repeatable": true
+    },
+    "features": {
+      "type": "component",
+      "component": "sections.why-feature",
       "repeatable": true
     },
     "finalCta": {

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_care_steps",
+  "info": {
+    "displayName": "care-step"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

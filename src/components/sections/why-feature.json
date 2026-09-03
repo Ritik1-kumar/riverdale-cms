@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_why_features",
+  "info": {
+    "displayName": "why-feature"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "checklist": {
+      "type": "component",
+      "component": "sections.specialty-tag",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
