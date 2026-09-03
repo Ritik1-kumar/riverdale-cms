@@ -10,5 +10,91 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.about-hero",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "sections.stat",
+      "repeatable": true
+    },
+    "storyEyebrow": {
+      "type": "string"
+    },
+    "storyTitle": {
+      "type": "string"
+    },
+    "storyTitleHighlight": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "component",
+      "component": "sections.timeline-item",
+      "repeatable": true
+    },
+    "physiciansEyebrow": {
+      "type": "string"
+    },
+    "physiciansTitle": {
+      "type": "string"
+    },
+    "physiciansTitleHighlight": {
+      "type": "string"
+    },
+    "physicians": {
+      "type": "component",
+      "component": "sections.physician",
+      "repeatable": true
+    },
+    "careEyebrow": {
+      "type": "string"
+    },
+    "careTitle": {
+      "type": "string"
+    },
+    "careTitleHighlight": {
+      "type": "string"
+    },
+    "careSteps": {
+      "type": "component",
+      "component": "sections.care-step",
+      "repeatable": true
+    },
+    "facilitiesEyebrow": {
+      "type": "string"
+    },
+    "facilitiesTitle": {
+      "type": "string"
+    },
+    "facilitiesTitleHighlight": {
+      "type": "string"
+    },
+    "facilities": {
+      "type": "component",
+      "component": "sections.facility-card",
+      "repeatable": true
+    },
+    "testimonialsEyebrow": {
+      "type": "string"
+    },
+    "testimonialsTitle": {
+      "type": "string"
+    },
+    "testimonialsTitleHighlight": {
+      "type": "string"
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "sections.testimonial",
+      "repeatable": true
+    },
+    "finalCta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false
+    }
+  }
 }

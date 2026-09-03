@@ -491,16 +491,39 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    careEyebrow: Schema.Attribute.String;
+    careSteps: Schema.Attribute.Component<'sections.care-step', true>;
+    careTitle: Schema.Attribute.String;
+    careTitleHighlight: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    facilities: Schema.Attribute.Component<'sections.facility-card', true>;
+    facilitiesEyebrow: Schema.Attribute.String;
+    facilitiesTitle: Schema.Attribute.String;
+    facilitiesTitleHighlight: Schema.Attribute.String;
+    finalCta: Schema.Attribute.Component<'sections.cta', false>;
+    hero: Schema.Attribute.Component<'sections.about-hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::about-page.about-page'
     > &
       Schema.Attribute.Private;
+    physicians: Schema.Attribute.Component<'sections.physician', true>;
+    physiciansEyebrow: Schema.Attribute.String;
+    physiciansTitle: Schema.Attribute.String;
+    physiciansTitleHighlight: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    stats: Schema.Attribute.Component<'sections.stat', true>;
+    storyEyebrow: Schema.Attribute.String;
+    storyTitle: Schema.Attribute.String;
+    storyTitleHighlight: Schema.Attribute.String;
+    testimonials: Schema.Attribute.Component<'sections.testimonial', true>;
+    testimonialsEyebrow: Schema.Attribute.String;
+    testimonialsTitle: Schema.Attribute.String;
+    testimonialsTitleHighlight: Schema.Attribute.String;
+    timeline: Schema.Attribute.Component<'sections.timeline-item', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -547,6 +570,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   attributes: {
     address: Schema.Attribute.String;
     bookAVisitLabel: Schema.Attribute.String;
+    bookAVisitLink: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -608,6 +632,11 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     hospitalAffiliationLinkText: Schema.Attribute.String;
     hospitalAffiliationText: Schema.Attribute.String;
     hospitalAffiliationTitle: Schema.Attribute.String;
+    insuranceCardText: Schema.Attribute.Text;
+    insuranceCardTitle: Schema.Attribute.String;
+    insuranceDescription: Schema.Attribute.Text;
+    insuranceEyebrow: Schema.Attribute.String;
+    insuranceTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -630,6 +659,35 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInsurancePlanInsurancePlan
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'insurance_plans';
+  info: {
+    displayName: 'Insurance Plan';
+    pluralName: 'insurance-plans';
+    singularName: 'insurance-plan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::insurance-plan.insurance-plan'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
   collectionName: 'services_pages';
   info: {
@@ -644,6 +702,8 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    finalCta: Schema.Attribute.Component<'sections.cta', false>;
+    hero: Schema.Attribute.Component<'sections.about-hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -651,6 +711,38 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<'sections.service-detail', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWhyUsPageWhyUsPage extends Struct.SingleTypeSchema {
+  collectionName: 'why_us_pages';
+  info: {
+    displayName: 'Why Us Page';
+    pluralName: 'why-us-pages';
+    singularName: 'why-us-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    features: Schema.Attribute.Component<'sections.why-feature', true>;
+    finalCta: Schema.Attribute.Component<'sections.cta', false>;
+    hero: Schema.Attribute.Component<'sections.about-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::why-us-page.why-us-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    stats: Schema.Attribute.Component<'sections.stat', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1173,7 +1265,9 @@ declare module '@strapi/strapi' {
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::global.global': ApiGlobalGlobal;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::insurance-plan.insurance-plan': ApiInsurancePlanInsurancePlan;
       'api::services-page.services-page': ApiServicesPageServicesPage;
+      'api::why-us-page.why-us-page': ApiWhyUsPageWhyUsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -123,11 +123,26 @@
       "component": "sections.faq-item",
       "repeatable": true
     },
+    "insuranceEyebrow": {
+      "type": "string"
+    },
+    "insuranceTitle": {
+      "type": "string"
+    },
     "testimonialsEyebrow": {
       "type": "string"
     },
     "testimonialsTitle": {
       "type": "string"
+    },
+    "insuranceDescription": {
+      "type": "text"
+    },
+    "insuranceCardTitle": {
+      "type": "string"
+    },
+    "insuranceCardText": {
+      "type": "text"
     },
     "testimonials": {
       "type": "component",

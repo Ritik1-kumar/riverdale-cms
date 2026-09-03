@@ -8,6 +8,9 @@
     "title": {
       "type": "string"
     },
+    "titleHighlight": {
+      "type": "string"
+    },
     "subtitle": {
       "type": "string"
     },

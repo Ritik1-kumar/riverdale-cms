@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_sections_service_details",
+  "info": {
+    "displayName": "service-detail"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "anchorId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "checklist": {
+      "type": "component",
+      "component": "sections.specialty-tag",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

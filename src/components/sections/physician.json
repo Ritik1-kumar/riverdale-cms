@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_physicians",
+  "info": {
+    "displayName": "physician"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "highlights": {
+      "type": "component",
+      "component": "sections.specialty-tag",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
