@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "patients_pages",
+  "info": {
+    "singularName": "patients-page",
+    "pluralName": "patients-pages",
+    "displayName": "Patients Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "sections.stat",
+      "repeatable": true
+    },
+    "transformationsEyebrow": {
+      "type": "string"
+    },
+    "transformationsTitle": {
+      "type": "string"
+    },
+    "transformationsTitleHighlight": {
+      "type": "string"
+    },
+    "transformationsDescription": {
+      "type": "text"
+    },
+    "transformations": {
+      "type": "component",
+      "component": "sections.transformation",
+      "repeatable": true
+    },
+    "testimonialsEyebrow": {
+      "type": "string"
+    },
+    "testimonialsTitle": {
+      "type": "string"
+    },
+    "testimonialsTitleHighlight": {
+      "type": "string"
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "sections.testimonial",
+      "repeatable": true
+    },
+    "finalCta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false
+    }
+  }
+}

@@ -98,6 +98,17 @@
     "doctorsDescription": {
       "type": "text"
     },
+    "doctors": {
+      "type": "component",
+      "component": "sections.doctor",
+      "repeatable": true
+    },
+    "doctorlink": {
+      "type": "string"
+    },
+    "doctorLinkLabel": {
+      "type": "string"
+    },
     "faqEyebrow": {
       "type": "string"
     },
@@ -106,11 +117,6 @@
     },
     "faqDescription": {
       "type": "text"
-    },
-    "doctors": {
-      "type": "component",
-      "component": "sections.doctor",
-      "repeatable": true
     },
     "faqCardTitle": {
       "type": "string"

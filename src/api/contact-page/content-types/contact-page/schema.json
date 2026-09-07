@@ -10,5 +10,81 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.about-hero",
+      "repeatable": false
+    },
+    "doctors": {
+      "type": "component",
+      "component": "sections.booking-doctor",
+      "repeatable": true
+    },
+    "clinicHours": {
+      "type": "component",
+      "component": "sections.clinic-hour",
+      "repeatable": true
+    },
+    "confirmButtonLabel": {
+      "type": "string"
+    },
+    "emergencyBold": {
+      "type": "string"
+    },
+    "emergencyRest": {
+      "type": "string"
+    },
+    "callUsLabel": {
+      "type": "string"
+    },
+    "visitUsLabel": {
+      "type": "string"
+    },
+    "clinicHoursHeading": {
+      "type": "string"
+    },
+    "closedLabel": {
+      "type": "string"
+    },
+    "step1Label": {
+      "type": "string"
+    },
+    "step2Label": {
+      "type": "string"
+    },
+    "step3Label": {
+      "type": "string"
+    },
+    "doctorHelperText": {
+      "type": "string"
+    },
+    "timeHelperText": {
+      "type": "string"
+    },
+    "namePlaceholder": {
+      "type": "string"
+    },
+    "phonePlaceholder": {
+      "type": "string"
+    },
+    "reasonPlaceholder": {
+      "type": "string"
+    },
+    "selectionLabel": {
+      "type": "string"
+    },
+    "successHeading": {
+      "type": "string"
+    },
+    "successMessage": {
+      "type": "text"
+    },
+    "resetButtonLabel": {
+      "type": "string"
+    },
+    "contactDetailsHeading": {
+      "type": "string"
+    }
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_clinic_hours",
+  "info": {
+    "displayName": "clinic-hour"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "string"
+    },
+    "closed": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

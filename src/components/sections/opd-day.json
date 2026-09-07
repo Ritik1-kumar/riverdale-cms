@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_opd_days",
+  "info": {
+    "displayName": "opd-day"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "timeSlots": {
+      "type": "component",
+      "component": "sections.specialty-tag",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

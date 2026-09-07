@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_transformations",
+  "info": {
+    "displayName": "transformation"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "before": {
+      "type": "text"
+    },
+    "after": {
+      "type": "text"
+    },
+    "patientName": {
+      "type": "string"
+    },
+    "patientMeta": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

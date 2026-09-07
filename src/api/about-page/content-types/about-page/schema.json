@@ -49,6 +49,12 @@
       "component": "sections.physician",
       "repeatable": true
     },
+    "physicianslink": {
+      "type": "string"
+    },
+    "physicianslinkLabel": {
+      "type": "string"
+    },
     "careEyebrow": {
       "type": "string"
     },

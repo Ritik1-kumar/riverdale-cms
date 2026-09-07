@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_pages",
+  "info": {
+    "singularName": "team-page",
+    "pluralName": "team-pages",
+    "displayName": "Team Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.about-hero",
+      "repeatable": false
+    },
+    "teamMembers": {
+      "type": "component",
+      "component": "sections.team-member",
+      "repeatable": true
+    },
+    "finalCta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false
+    }
+  }
+}

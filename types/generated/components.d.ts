@@ -13,6 +13,19 @@ export interface SectionsAboutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsBookingDoctor extends Struct.ComponentSchema {
+  collectionName: 'components_sections_booking_doctors';
+  info: {
+    displayName: 'booking-doctor';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    opdDays: Schema.Attribute.Component<'sections.opd-day', true>;
+    opdLabel: Schema.Attribute.String;
+    specialty: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsCareStep extends Struct.ComponentSchema {
   collectionName: 'components_sections_care_steps';
   info: {
@@ -22,6 +35,18 @@ export interface SectionsCareStep extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     number: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsClinicHour extends Struct.ComponentSchema {
+  collectionName: 'components_sections_clinic_hours';
+  info: {
+    displayName: 'clinic-hour';
+  };
+  attributes: {
+    closed: Schema.Attribute.Boolean;
+    day: Schema.Attribute.String;
+    hours: Schema.Attribute.String;
   };
 }
 
@@ -131,6 +156,17 @@ export interface SectionsNavLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsOpdDay extends Struct.ComponentSchema {
+  collectionName: 'components_sections_opd_days';
+  info: {
+    displayName: 'opd-day';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    timeSlots: Schema.Attribute.Component<'sections.specialty-tag', true>;
+  };
+}
+
 export interface SectionsPhysician extends Struct.ComponentSchema {
   collectionName: 'components_sections_physicians';
   info: {
@@ -195,6 +231,21 @@ export interface SectionsStat extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsTeamMember extends Struct.ComponentSchema {
+  collectionName: 'components_sections_team_members';
+  info: {
+    displayName: 'team-member';
+  };
+  attributes: {
+    bio: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    specialty: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials';
   info: {
@@ -220,6 +271,20 @@ export interface SectionsTimelineItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsTransformation extends Struct.ComponentSchema {
+  collectionName: 'components_sections_transformations';
+  info: {
+    displayName: 'transformation';
+  };
+  attributes: {
+    after: Schema.Attribute.Text;
+    before: Schema.Attribute.Text;
+    category: Schema.Attribute.String;
+    patientMeta: Schema.Attribute.String;
+    patientName: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsWhyFeature extends Struct.ComponentSchema {
   collectionName: 'components_sections_why_features';
   info: {
@@ -239,7 +304,9 @@ declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
       'sections.about-hero': SectionsAboutHero;
+      'sections.booking-doctor': SectionsBookingDoctor;
       'sections.care-step': SectionsCareStep;
+      'sections.clinic-hour': SectionsClinicHour;
       'sections.cta': SectionsCta;
       'sections.doctor': SectionsDoctor;
       'sections.facility-card': SectionsFacilityCard;
@@ -248,13 +315,16 @@ declare module '@strapi/strapi' {
       'sections.hero': SectionsHero;
       'sections.marquee-item': SectionsMarqueeItem;
       'sections.nav-link': SectionsNavLink;
+      'sections.opd-day': SectionsOpdDay;
       'sections.physician': SectionsPhysician;
       'sections.service-card': SectionsServiceCard;
       'sections.service-detail': SectionsServiceDetail;
       'sections.specialty-tag': SectionsSpecialtyTag;
       'sections.stat': SectionsStat;
+      'sections.team-member': SectionsTeamMember;
       'sections.testimonial': SectionsTestimonial;
       'sections.timeline-item': SectionsTimelineItem;
+      'sections.transformation': SectionsTransformation;
       'sections.why-feature': SectionsWhyFeature;
     }
   }
