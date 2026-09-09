@@ -40,46 +40,41 @@ Step 2:Create a git repo
     git branch -M main
     git push -u origin main
 
-Step 3: Create a free Web Service on Render
-    Go to render.com, sign up/log in
-    Create a new Project
-    
-    First: create the Postgres database (if you haven't yet)
-        Click + Create new service (or + New at top right)
-        Choose PostgreSQL
-        Give it a name (e.g. riverdale-db)
-        Select the Free plan
-        Click Create Database
-        Once created, go to its page → Connections section → copy the Internal Database URL (you'll need it in a minute)
-
-    Then: create the Web Service
-        Click + Create new service again → Web Service
-        Connect your GitHub repo (the Strapi project one)
-        Fill in:
-        Name: your project name
-        Region: same region as your Postgres DB (important — internal URLs only work within the same region)
-        Branch: main
-        Build Command: npm install && npm run build
-        Start Command: npm run start
-        Scroll to Instance Type → select Free ($0/month)
-    
-    Then: Environment Variables section
-        Add these (this is where you paste the Internal Database URL from your Postgres instance):
-
-        Name	                                Value
-        DATABASE_CLIENT	                        postgres
-        DATABASE_URL	                        (Internal Database URL you copied)
-        DATABASE_SSL	                        true
-        DATABASE_SSL_REJECT_UNAUTHORIZED	    false
-        NODE_ENV	                            production
-        APP_KEYS	                            (from your local .env)
-        API_TOKEN_SALT	                        (from your local .env)
-        ADMIN_JWT_SECRET	                    (from your local .env)
-        JWT_SECRET	                            (from your local .env)
-        TRANSFER_TOKEN_SALT	                    (from your local .env)
-
-    Use Add from .env to bulk-paste your local .env, 
-    then manually fix DATABASE_CLIENT to postgres and add the DATABASE_URL/SSL vars since those aren't in your local file.
-
-Then deploy
-    Click Deploy web service at the bottom, and watch the Logs tab. Let me know what shows up there once it finishes building.
+Step 3: we are using namecheap hosting you can use any of your hosting provider
+    open c-panel
+        create a domain  (in file manager check folder created automaticall with same name)
+        make database in database wizard
+            create user and assign it to that database
+        now create a node.js app 
+            node version matching package.json node version
+            use production or development which you see fit
+            in application root use the folder name which shows in file manager when you create domain
+            in application url set the domain by selecting
+            then next file one write server.js
+        Now upload files
+            Open file manager and open the folder which have been created
+                Option 1:-  With Node Modules
+                    make zip of your local project and upload it there
+                    unzip it and move all into parent
+                Option 2:- Without node Modules
+                    make zip of your local project without node modules and upload it there
+                    unzip it and move all into parent
+                Option 3:- github
+                    make repo and upload all to github
+                    open terminal and use git clone for adding 
+        Open file manager and open the folder which have been created        
+            in env change   (check database and username first as it adds some suffix or prefix automatically)
+                DATABASE_CLIENT=mysql  (if using mysql if using postgres or any other change that and port accordingly)
+                DATABASE_HOST=localhost
+                DATABASE_PORT=3306
+                DATABASE_NAME=your_database_name
+                DATABASE_USERNAME=your_username
+                DATABASE_PASSWORD=your_password
+                DATABASE_SSL=false
+        go to nodejs app click pencil icon 
+            if uploaded with node modules then simple restart app
+            if uploaded otherwise 
+                open terminal 
+                copy paste virtual environmet command at top naming source
+                do npm install and npm run build
+                restart the app
