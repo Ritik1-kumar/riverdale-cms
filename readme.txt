@@ -40,7 +40,7 @@ Step 2:Create a git repo
     git branch -M main
     git push -u origin main
 
-Step 3: we are using namecheap hosting you can use any of your hosting provider
+Step 3: Live Project (we are using namecheap hosting you can use any of your hosting provider)
     open c-panel
         create a domain  (in file manager check folder created automaticall with same name)
         make database in database wizard
