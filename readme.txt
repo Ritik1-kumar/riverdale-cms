@@ -71,6 +71,9 @@ Step 3: we are using namecheap hosting you can use any of your hosting provider
                 DATABASE_USERNAME=your_username
                 DATABASE_PASSWORD=your_password
                 DATABASE_SSL=false
+        in server.js file comment all and add
+            const strapi = require('@strapi/strapi');
+            strapi.createStrapi({ distDir: 'dist' }).start();
         go to nodejs app click pencil icon 
             if uploaded with node modules then simple restart app
             if uploaded otherwise 
